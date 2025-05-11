@@ -3,7 +3,7 @@ game 'gta5'
 
 description 'Binoculars with NUI HUD for QBCore'
 author 'zDev'
-version '1.2.0'
+version '1.0.0'
 
 client_script 'client.lua'
 server_script 'server.lua'
