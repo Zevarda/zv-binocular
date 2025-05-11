@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: transparent;
+        overflow: hidden;
+      }
+
+      .hud-container {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        color: white;
+        font-size: 16px;
+        text-shadow: 1px 1px 2px black;
+      }
+
+      .hud-instructions {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 16px;
+        color: white;
+        text-shadow: 1px 1px 2px black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hud-container" id="hud-info">
+    </div>
+    <div class="hud-instructions">
+      Press <b>E</b> to switch mode, <b>ESC</b> or <b>Use Again</b> to exit
+    </div>
+
+    <script>
+      window.addEventListener('message', function (event) {
+        const data = event.data;
+        if (data.action === 'show') {
+          document.body.style.display = 'block';
+        } else if (data.action === 'hide') {
+          document.body.style.display = 'none';
+        }
+      });
+
+      document.body.style.display = 'none';
+    </script>
+  </body>
+</html>
