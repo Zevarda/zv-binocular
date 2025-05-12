@@ -20,7 +20,7 @@ A lightweight and immersive binocular script for **QBCore** servers, designed wi
 2. Add to your `server.cfg`:
 
 ```
-ensure binoculars
+ensure zv-binocular
 ```
 
 
